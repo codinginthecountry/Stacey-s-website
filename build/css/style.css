@@ -357,6 +357,7 @@ th {
   padding: 0; }
 
 header {
+  z-index: 100;
   width: 100%;
   height: 60px;
   position: fixed;
@@ -375,20 +376,92 @@ header {
         text-align: center; }
 
 .name-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #ffcccc;
   padding-top: 60px; }
-  .name-banner h1 {
-    font-family: "Great Vibes", cursive;
+  .name-banner .email {
+    -ms-flex-item-align: center;
+        align-self: center;
     text-align: center;
-    font-weight: normal;
-    font-size: 70px;
-    word-spacing: 6px; }
-  .name-banner h2 {
-    font-family: "Great Vibes", cursive;
-    text-align: center;
-    font-weight: normal;
-    font-size: 50px;
-    word-spacing: 6px; }
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33%;
+            flex: 1 0 33%; }
+    .name-banner .email:active {
+      color: black; }
+  .name-banner .banner-header {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33%;
+            flex: 1 0 33%;
+    width: 100%; }
+    .name-banner .banner-header h1 {
+      font-family: "Great Vibes", cursive;
+      text-align: center;
+      font-weight: normal;
+      font-size: 70px;
+      word-spacing: 6px; }
+    .name-banner .banner-header h2 {
+      font-family: "Great Vibes", cursive;
+      text-align: center;
+      font-weight: normal;
+      font-size: 50px;
+      word-spacing: 6px; }
+  .name-banner .social-media {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33%;
+            flex: 1 0 33%;
+    -ms-flex-line-pack: center;
+        align-content: center; }
+    .name-banner .social-media ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      list-style: none; }
+
+.banner-img {
+  height: 300px;
+  background: url("/images/cupcake-edited.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .banner-img::before {
+    content: "";
+    position: absolute;
+    top: 300px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcccc), to(lightpink));
+    background-image: linear-gradient(#ffcccc, lightpink);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+    width: 100%;
+    height: 60px;
+    z-index: -100; }
+  .banner-img .slogan {
+    padding: 10px;
+    background: white;
+    border: 4px #654321 double;
+    color: #654321;
+    border-radius: 5px;
+    position: absolute;
+    margin: auto;
+    top: 200px;
+    right: 0;
+    left: 0;
+    width: 450px;
+    height: 180px;
+    text-align: center; }
+    .banner-img .slogan h2 {
+      position: relative;
+      top: 35%;
+      margin: 0; }
 
 footer {
   background: blue; }
