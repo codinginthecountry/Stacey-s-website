@@ -427,7 +427,7 @@ header {
       list-style: none; }
 
 .banner-img {
-  height: 300px;
+  height: 400px;
   background: url("/images/cupcake-edited.jpg") no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -436,7 +436,7 @@ header {
   .banner-img::before {
     content: "";
     position: absolute;
-    top: 300px;
+    top: 400px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcccc), to(lightpink));
     background-image: linear-gradient(#ffcccc, lightpink);
     -webkit-transform-origin: top left;
@@ -445,23 +445,44 @@ header {
     height: 60px;
     z-index: -100; }
   .banner-img .slogan {
-    padding: 10px;
-    background: white;
+    font-size: 0px;
+    padding: 0px;
+    background: rgba(255, 255, 255, 0.1);
     border: 4px #654321 double;
     color: #654321;
-    border-radius: 5px;
     position: absolute;
     margin: auto;
-    top: 200px;
+    top: 370px;
     right: 0;
     left: 0;
-    width: 450px;
-    height: 180px;
-    text-align: center; }
+    width: 0px;
+    height: 0px;
+    text-align: center;
+    -webkit-transition: all ease-in 0.6s;
+    transition: all ease-in 0.6s; }
     .banner-img .slogan h2 {
       position: relative;
       top: 35%;
       margin: 0; }
+  .banner-img .scaled {
+    background: white;
+    padding: 10px;
+    width: 450px;
+    height: 180px;
+    top: 270px;
+    font-size: 16px; }
+
+.about {
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  text-align: center;
+  line-height: 40px; }
+  .about .services ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 footer {
   background: blue; }
